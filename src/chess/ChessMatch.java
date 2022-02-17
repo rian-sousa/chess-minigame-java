@@ -11,7 +11,8 @@ public class ChessMatch {
     
     public ChessMatch(){
         board = new Board(8,8);
-        initialSetup();
+        board.placePiece(new King(board, Color.WHITE), new Position(2,1));
+        board.placePiece(new King(board, Color.BLACK), new Position(2,1));
     }
 
     public ChessPiece[][] getPieces(){
